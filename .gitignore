@@ -5,4 +5,4 @@ __pycache__/
 .venv
 
 # data (optional, depends on size)
-Data/
+data/
