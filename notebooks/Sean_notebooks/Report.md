@@ -19,10 +19,10 @@ Meeting Context Variables
 
 Meeting context is constructed using multiple binary indicators (yes/no), including:
 
-meeting through friends, family, or neighbors
-meeting in bars, parties, or public places
-meeting at work
-meeting online
+- Meeting through friends, family, or neighbors
+- Meeting in bars, parties, or public places
+- Meeting at work
+- Meeting online
 
 These are aggregated into three broad categories:
 
@@ -79,11 +79,9 @@ Weighted and unweighted results are highly consistent, with only minor differenc
 | Same-sex couples      | 50.35% | 15.60% | 30.22% |
 
 
-These results confirm that:
+These results confirm that same-sex couples are approximately three times more likely to report online meeting contexts than different-sex couples.
 
-Same-sex couples are approximately three times more likely to report online meeting contexts than different-sex couples.
-
-Importantly, weighted and unweighted results are consistent, indicating that these patterns are not driven by sampling bias.
+The consistency between weighted and unweighted estimates indicates that these differences are not driven by sampling bias.
 
 
 ## 5. Relationship Stability by Meeting Context
@@ -103,43 +101,63 @@ Online-initiated relationships consistently exhibit lower observed stability com
 
 ## 6. Regression Analysis
 
-To formally test whether meeting context predicts relationship outcomes, logistic regression models were estimated.
+To formally test whether meeting context predicts long-term relationship outcomes, logistic regression models were estimated.
 
 ### Model Structure
-- Outcome (Y): Observed relationship status at Wave 3
+- Outcome (Y): Relationship status at Wave 3 (still together vs separated)
 - Main predictor (X): Meeting context (cluster)
 - Controls (Z):
     - Wave 2 relationship status
-    - marital status
-    - same-sex indicator
-    - partner education
+    - Marital status
+    - Same-sex indicator
+    - Partner education
+
+![Odds ratios from logistic regression model](logistic_regression_results.png)
+
+*Figure 6.1: Odds ratios from logistic regression models predicting relationship survival at Wave 3.*
+
+The results indicate that meeting context is associated with relationship stability. Compared to online-initiated relationships, both socially and work-initiated relationships show higher odds of remaining together.
+
+However, once controlling for Wave 2 relationship status, the magnitude of these effects is reduced, suggesting that early relationship survival is a strong predictor of long-term outcomes.
+
+Other control variables, such as marital status, show expected positive associations with stability, while same-sex status is not statistically significant.
+
+Overall, the findings suggest that meeting context has an initial association with relationship outcomes, but much of this effect operates through earlier relationship survival.
 
 ### Key Results (Adjusted Model)
 
-Wave 2 survival is the strongest predictor (OR ≈ 4.77, p < 0.001)
-Marriage increases likelihood of continuation (OR ≈ 1.63, p < 0.05)
-Work-based relationships show higher odds than online (OR ≈ 1.84), but only marginally significant
-Social vs online differences are not statistically significant
-Same-sex status is not a significant predictor
-Partner education is not significant
+- Wave 2 relationship status is the strongest predictor of long-term survival (OR ≈ 4.77, p < 0.001)
+- Marriage is associated with higher odds of remaining together (OR ≈ 1.63, p < 0.05)
+- Work-based relationships show higher odds compared to online (OR ≈ 1.84), but this effect is only marginally significant
+- Differences between social and online meeting contexts are not statistically significant
+- Same-sex status is not a significant predictor
+- Partner education is not significantly associated with relationship outcomes
 
 ### Interpretation
 
-While meeting context is associated with relationship outcomes, much of this effect is explained by prior relationship survival. After controlling for Wave 2 status, differences between meeting contexts weaken, although work-based relationships still show higher odds relative to online-initiated relationships, this effect is no longer statistically significant after controlling for prior relationship status.
+The results indicate that while meeting context initially appears to be associated with relationship outcomes, much of this relationship is explained by prior relationship survival. 
 
+After controlling for Wave 2 status, differences between meeting contexts largely diminish. In particular, the advantage observed for work-based relationships weakens and is no longer statistically significant.
+
+This suggests that early relationship stability is the primary driver of long-term outcomes, with meeting context playing a more limited role once this factor is taken into account.
 
 ## 7. Model Performance
 
 Accuracy: ~96.8% (not informative due to imbalance)
 ROC AUC: ~0.67 (moderate predictive power)
 
-Due to the high proportion of ongoing relationships, accuracy is inflated. ROC AUC provides a more appropriate evaluation, indicating that the model has moderate ability to distinguish between outcomes.
+Due to the high proportion of ongoing relationships, accuracy is inflated and not an informative metric in this context. ROC AUC provides a more appropriate evaluation, indicating that the model has moderate ability to distinguish between outcomes.
 
 ---
 
 ## 8. Robustness Checks
 
-Applying survey weights to descriptive analyses shows:
+To assess whether the results are sensitive to sampling differences, survey weights were applied to the descriptive analyses.
+
+![Weighted cluster composition and relationship stability across waves](weighted_cluster_stability.png)
+*Figure 8.1: Weighted distribution of meeting contexts and relationship stability across Wave 2 and Wave 3.*
+
+The weighted estimates show:
 
 - Minimal changes in proportions
 - No change in overall patterns
@@ -178,6 +196,6 @@ This analysis shows that:
 
 ### Final Insight
 
-Differences in relationship outcomes appear to be associated with meeting context rather than couple type, although this association weakens after accounting for prior relationship stability.
+Differences in relationship outcomes appear to be associated with meeting context rather than couple type. However, this association weakens substantially after accounting for prior relationship stability.
 
-This suggests that early relationship conditions and prior stability play a more central role in long-term outcomes than initial meeting context alone.
+Overall, the findings suggest that early relationship conditions—particularly whether a couple remains together in the short term—are the primary drivers of long-term outcomes, while initial meeting context plays a more limited role.
