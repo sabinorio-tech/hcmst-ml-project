@@ -112,7 +112,7 @@ To formally test whether meeting context predicts long-term relationship outcome
     - Same-sex indicator
     - Partner education
 
-![Odds ratios from logistic regression model](logistic_regression_results.png)
+![Odds ratios from logistic regression model](figures/logistic_regression_results.png)
 
 *Figure 6.1: Odds ratios from logistic regression models predicting relationship survival at Wave 3.*
 
@@ -154,7 +154,7 @@ Due to the high proportion of ongoing relationships, accuracy is inflated and no
 
 To assess whether the results are sensitive to sampling differences, survey weights were applied to the descriptive analyses.
 
-![Weighted cluster composition and relationship stability across waves](weighted_cluster_stability.png)
+![Weighted cluster composition and relationship stability across waves](figures/weighted_cluster_stability.png)
 *Figure 8.1: Weighted distribution of meeting contexts and relationship stability across Wave 2 and Wave 3.*
 
 The weighted estimates show:
